@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<main>
+    <p class="wait_text">COming soon...</p>
+
+    <img src="{% static 'math_app/1.png' %}" alt="">
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <button class = 'redirect_button'> TO MATH PAGE </button>
+
+
+    </form>
+</main>
+{% endblock %}

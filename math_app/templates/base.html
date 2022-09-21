@@ -1,0 +1,48 @@
+{% load static %}
+{% block header %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EASYTASK</title>
+        <link rel="stylesheet" href="{% static 'math_app/base.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <header>
+                <p class = 'logo_text'>EASYTASKS</p>
+                <ul>
+                    {% if menu_num == 1 %}
+                    
+                    <li style = "border-bottom: 5px solid #2A9E3D;"><a href="/math">MATH</a></li>
+                    {% else %}
+                    <li><a href="/math">MATH</a></li>
+                    {% endif %}
+                    {% if menu_num == 2 %}
+                    <li style = "border-bottom: 5px solid #2A9E3D;"><a href="/physics">PHYSICS</a></li>
+                    {% else %}
+                    <li><a href="/physics">PHYSICS</a></li>
+                    {% endif %}
+                    {% if menu_num == 3 %}
+                    <li style = "border-bottom: 5px solid #2A9E3D; " ><a href="/chemistry">CHEMISTRY</a></li>
+                    {% else %}
+                    <li><a href="/chemistry">CHEMISTRY</a></li>
+                    {% endif %}
+                </ul>
+
+        </header>
+        {% block content %}
+
+        {% endblock content%}
+        <footer>
+            <a href="https://www.tiktok.com/@iteducationua" target="_blank"><p class = 'logo_text logo1'>FOLLOW MY TIK-TOK</p></a>
+
+        </footer>
+        {% endblock header%}
+    </body>
+</html>
+

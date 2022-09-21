@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<main>
+    <p class="wait_text">Select TASK type</p>
+
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <button name="number_button" value="1" class = 'redirect_button redirect_button1'>Quadratic equation</button>
+
+
+    </form>
+</main>
+
+
+{% endblock %}

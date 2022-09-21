@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<main>
+    <p class="wait_text">Quadratic equation</p>
+
+
+    <form class = 'task_form' action="" method="POST">
+        {% csrf_token %}
+
+        <input name="k1"  type="number" placeholder='First coefficient' >
+        <input name="k2" type="number" placeholder="SECOND coefficient">
+        <input name="k3"  type="number" placeholder="third coefficient">
+
+
+        <button name="number_button" value="1" class = 'redirect_button redirect_button1 redirect_button2'>Enter</button>
+
+
+    </form>
+    {% if total == True %}
+    <div class="total_div">
+        <p class="total" >c1 = {{c1}}</p>
+        <p class="total" >c2 = {{c2}}</p>
+        <p class="total" >c3 = {{c3}}</p>
+        <p class="total" >D = {{D}}</p>
+        <p class="total" >√D = {{Ds}}</p>
+        <p class="total" >x1 = {{x1}}</p>
+        <p class="total" > x2 = {{x2}}</p>
+    </div>
+    {% endif %}
+</main>
+
+
+{% endblock %}
