@@ -9,10 +9,9 @@
 
     <form class = 'task_form' action="" method="POST">
         {% csrf_token %}
-
-        <input name="k1"  type="number" placeholder='First coefficient' >
-        <input name="k2" type="number" placeholder="SECOND coefficient">
-        <input name="k3"  type="number" placeholder="third coefficient">
+        <input name="k1" step="0.01" type="number" placeholder='First coefficient' >
+        <input name="k2" step="0.01" type="number" placeholder="SECOND coefficient">
+        <input name="k3" step="0.01" type="number" placeholder="third coefficient">
 
 
         <button name="number_button" value="1" class = 'redirect_button redirect_button1 redirect_button2'>Enter</button>

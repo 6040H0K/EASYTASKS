@@ -47,16 +47,23 @@ class Math_task1(TemplateView):
         k1, k2, k3 = None, None, None
         if request.method == 'POST':
             try:
-                k1 = int(request.POST.get('k1'))
-                k2 = int(request.POST.get('k2'))
-                k3 = int(request.POST.get('k3'))
+                k1 = float(request.POST.get('k1'))
+                k2 = float(request.POST.get('k2'))
+                k3 = float(request.POST.get('k3'))
                 d = k2 ** 2 - 4 * k1 * k3
-                d1 = d
-                d = d ** 0.5
+                if d > 0:
+                    d1 = d
+                    d = d ** 0.5
 
-                x1 = (k2 * -1 + d) / ( 2 * k1)
-                x2 = (k2 * -1 - d) / ( 2 * k1)
-                total = True
+                    x1 = (k2 * -1 + d) / ( 2 * k1)
+                    x2 = (k2 * -1 - d) / ( 2 * k1)
+
+                    total = True
+                elif d < 0:
+                    
+                    total = True
+                else:
+                    x1 = -k2 / (2 * k1)
             except:
                 pass
 
